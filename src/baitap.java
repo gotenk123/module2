@@ -1,7 +1,9 @@
 
 import java.util.Scanner;
 import java.util.Arrays;
-public class bai1 {
+
+
+public class baitap {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("số lượng sinh vien");
@@ -43,6 +45,19 @@ public class bai1 {
         if (!found) {
             System.out.println("Không tìm thấy số " + target + " trong mảng.");
 
+        }
+
+        for (int i = 0; i < number.length; i++) {
+            System.out.print("Sinh Viên Thứ : " + (i+1) + "Có Điểm " + number[i] + " => ");
+            if (number[i] >= 8.0) {
+                System.out.println("Giỏi");
+            } else if (number[i] >= 6.5) {
+                System.out.println("Khá");
+            } else if (number[i] >= 5.0) {
+                System.out.println("Trung bình");
+            } else {
+                System.out.println("Yếu");
+            }
         }
     }
 }
